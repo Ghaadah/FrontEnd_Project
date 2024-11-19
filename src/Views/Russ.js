@@ -1,26 +1,11 @@
-import React from 'react';
-import { backgroundColors } from '../Uitls/chartColors';
-import useFetchData from '../Hooks/GetAPI'; // Import the custom hook
-import 'chart.js/auto';
-import { Bar } from 'react-chartjs-2';
+import React from 'react'
 
-const Russ = ({ title }) => {
-  const url = undefined;
-
-
+function Russ() {
   return (
-    <section className="container">
-      <h1>{title}</h1>
-    </section>
-  );
-};
+    <div className=" m-5 text-center">
+      <h4>Russ Page</h4>
+    </div>
+  )
+}
 
-const styles = {
-  chartContainer: {
-    maxWidth: '80%',
-    width: '100%',
-    height: '100%',
-    margin: '20px auto',
-  },
-};
-export default Russ;
+export default Russ

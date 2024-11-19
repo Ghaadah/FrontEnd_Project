@@ -1,16 +1,11 @@
-import React from 'react';
-import useFetchData from '../Hooks/GetAPI'; // Import the custom hook
-import { Card, Col, Row, Spinner } from 'react-bootstrap'; //style the card
+import React from 'react'
 
-const Raghad = ({ title}) => {
-  const url = undefined;
-
+function Raghad() {
   return (
-    <main className="contanier">
-      <h2 className ="text-center m-4">{title}</h2>
-      
-    </main>
-  );
-};
+    <div className=" m-5 text-center">
+      <h4>Raghad Page</h4>
+    </div>
+  )
+}
 
-export default Raghad;
+export default Raghad

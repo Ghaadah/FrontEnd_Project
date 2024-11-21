@@ -11,3 +11,4 @@ h1 {
 .container {
   text-align: center;
 }
+.style-dropdown[title] { color: #FFFFFF !important; } 

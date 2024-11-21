@@ -1,14 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
 import { Link } from "react-router-dom";
-// import { LinkContainer } from "react-router-bootstrap"; 
-// import Container from "react-bootstrap/Container";
-import {Nav, Navbar,NavDropdown,Container }from "react-bootstrap";
-// import Navbar from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
+import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
 import mortarboard from "./icon.svg";
-
-
 
 function NavMenu() {
   return (
@@ -16,26 +10,39 @@ function NavMenu() {
       <Container>
         <Navbar.Brand href="/Home">
           <img
-            alt="mortarboard logo black and white"
+            alt="mortarboard icon"
             src={mortarboard}
             width="30"
             height="30"
-            className="d-inline-block align-top" />{" "}
-          eduExp
+            className="d-inline-block align-top "
+          />{" "}
+          <span className="text-warning">eduExp</span>
+          <h6 className="text-secondary">Education Expenses</h6>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/Home">Home</Nav.Link>
+          <Nav fill variant="tabs" className="container">
+            <Nav.Link as={Link} to="/Home" className="text-light">
+              Home
+            </Nav.Link>
             <NavDropdown title="Dat page" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/Dat">Dat Sub_Page</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Placeholder
+              <NavDropdown.Item href="/Dat" className=" text-center">
+                Dat Sub_Page
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#" className="text-center ">
+                Placeholder for items
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#" className="text-center">
+                Width = content width
+              </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/Raghad"> Raghad Page</Nav.Link>
-            <Nav.Link as={Link} to="/Russ">Russ Page</Nav.Link>
+            <Nav.Link as={Link} to="/Raghad" className="text-light">
+              {" "}
+              Raghad Page
+            </Nav.Link>
+            <Nav.Link as={Link} to="/Russ" className="text-light">
+              Russ Page
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

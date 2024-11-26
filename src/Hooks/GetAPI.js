@@ -7,23 +7,26 @@ const useFetchData = (url) => {
 
   useEffect(() => {
     const fetchData = async () => {
-       try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const result = await response.json();
-      setData(result);
-      setIsLoaded(true);
+      setIsLoaded(false);
+      setIsError(false);
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const result = await response.json();
+        setData(result);
+        setIsLoaded(true);
       } catch (error) {
-      setIsError(true);
-    };
+        setIsError(true);
+      }
     };
 
     fetchData();
   }, [url]);
 
-  return { data, isLoaded,isError };
+  return { data, isLoaded, isError };
 };
 
 export default useFetchData;
